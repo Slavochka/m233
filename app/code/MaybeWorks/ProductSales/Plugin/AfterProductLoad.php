@@ -13,7 +13,7 @@ use Magento\Catalog\Model\Product;
 class AfterProductLoad
 {
     /** @var SalesInformationInterface */
-    protected $_salesInformation;
+    protected $salesInformation;
 
     /**
      * AfterProductLoad constructor.
@@ -22,7 +22,7 @@ class AfterProductLoad
     public function __construct(
         SalesInformationInterface $salesInformation
     ) {
-        $this->_salesInformation = $salesInformation;
+        $this->salesInformation = $salesInformation;
     }
 
     /**
@@ -33,8 +33,8 @@ class AfterProductLoad
     {
         /** @var ProductExtension $productExtension */
         $productExtension = $product->getExtensionAttributes();
-        $this->_salesInformation->setProductId($product->getId());
-        $productExtension->setSalesInformation($this->_salesInformation);
+        $this->salesInformation->setProductId($product->getId());
+        $productExtension->setSalesInformation($this->salesInformation);
         $product->setExtensionAttributes($productExtension);
         return $product;
     }
