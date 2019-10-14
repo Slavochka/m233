@@ -1,0 +1,22 @@
+{
+  "name": "maybeworks/module-product-sales",
+  "description": "Add Sales Information to Products",
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": "~7.1.3||~7.2.0||~7.3.0",
+    "magento/framework": "102.0.*",
+    "magento/module-catalog": "103.0.*"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MaybeWorks\\ProductSales\\": ""
+    }
+  },
+  "version": "1.0.0"
+}
